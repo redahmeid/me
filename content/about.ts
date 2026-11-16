@@ -18,6 +18,17 @@ export const about = {
     "I'm a dad, my sporting hero is Muhammad Ali, and I've always had a contrarian streak. I bought an Android phone in 2009 when my friends were all buying iPhones, and I go for the green in one when my playing partners lay up.",
   ],
 
+  // The four corners of the logo, in the order they appear: top left, top right, bottom left, bottom right.
+  fourCorners: {
+    intro: "My logo frames my initials with four corners, one for each part of my life.",
+    corners: {
+      strategy: "Setting technology direction that responds to change.",
+      tech: "Building software since 1999, and still building.",
+      family: "The people who matter most.",
+      football: "Watching it, coaching it, and building TeamMate for it.",
+    },
+  },
+
   interests: [
     { label: "Grassroots football", detail: "Coaching, and building tools for the people who run it" },
     { label: "Football analytics", detail: "Expected goals, expected points and too many spreadsheets" },

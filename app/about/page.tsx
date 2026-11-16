@@ -5,6 +5,8 @@ import portrait from "@/assets/reda-hmeid.jpg";
 import { about } from "@/content/about";
 import { site } from "@/content/site";
 import { ArrowLink, ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
+import { LogoMark } from "@/components/logo";
+import { CORNERS } from "@/components/logo-shapes";
 
 export const metadata: Metadata = {
   title: "About",
@@ -36,6 +38,24 @@ export default function AboutPage() {
           </div>
         </Container>
       </header>
+
+      <Section label="Four corners" title={about.fourCorners.intro}>
+        <div className="grid items-center gap-10 sm:grid-cols-[minmax(0,13rem)_minmax(0,1fr)]">
+          <LogoMark title="RH logo with four corners" className="h-44 w-44 text-ink sm:h-52 sm:w-52" />
+          <ul className="grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2">
+            {CORNERS.map((c) => (
+              <li key={c.key} className="bg-paper p-5">
+                <p className="flex items-center gap-2 font-medium text-ink">
+                  <span aria-hidden="true" className="h-2.5 w-2.5 rounded-sm" style={{ background: `var(--corner-${c.key})` }} />
+                  {c.label}
+                  <span className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink-muted">{c.position}</span>
+                </p>
+                <p className="mt-1.5 text-[0.95rem] leading-relaxed text-ink-soft">{about.fourCorners.corners[c.key]}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
 
       <Section label="Professionally">
         <div className="max-w-2xl space-y-5 font-serif text-[1.2rem] leading-[1.75] text-ink-soft">

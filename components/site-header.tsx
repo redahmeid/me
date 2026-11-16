@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { site } from "@/content/site";
 import { Container } from "./ui";
 import { NavLinks, NavLinksStatic } from "./nav-links";
+import { LogoMark } from "./logo";
 
 export function SiteHeader() {
   return (
@@ -10,14 +11,9 @@ export function SiteHeader() {
       <Container className="flex flex-col py-2 sm:flex-row sm:items-center sm:justify-between sm:py-0">
         <Link
           href="/"
-          className="inline-flex min-h-11 items-center gap-2.5 self-start font-serif text-[1.35rem] tracking-[-0.01em] text-ink sm:self-auto"
+          className="group inline-flex min-h-11 items-center gap-2.5 self-start font-serif text-[1.35rem] tracking-[-0.01em] text-ink sm:self-auto"
         >
-          <span
-            aria-hidden="true"
-            className="grid h-7 w-7 place-items-center rounded-full bg-ink font-sans text-[0.62rem] font-semibold tracking-wide text-paper"
-          >
-            RH
-          </span>
+          <LogoMark detail="simple" className="h-9 w-9 shrink-0" />
           {site.name}
         </Link>
         <nav aria-label="Main" className="sm:py-2">

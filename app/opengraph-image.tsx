@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { site } from "@/content/site";
+import { LOGO_COLORS, logoSvg } from "@/components/logo-shapes";
 
 export const alt = `${site.name}: technology strategy, engineering leadership and AI`;
 export const size = { width: 1200, height: 630 };
@@ -10,6 +11,9 @@ export const contentType = "image/png";
 // Read once at module scope so the image prerenders at build time.
 const photo = await readFile(join(process.cwd(), "assets/reda-hmeid.jpg"));
 const photoSrc = `data:image/jpeg;base64,${photo.toString("base64")}`;
+
+const markSvg = logoSvg({ ink: "#eef0f3", ...LOGO_COLORS.dark }, { size: 96 });
+const markSrc = `data:image/svg+xml;base64,${Buffer.from(markSvg).toString("base64")}`;
 
 export default function Image() {
   return new ImageResponse(
@@ -41,10 +45,8 @@ export default function Image() {
             color: "#eef0f3",
           }}
         >
-          <div style={{ fontSize: 18, letterSpacing: 3, textTransform: "uppercase", opacity: 0.75 }}>
-            Strategy · Leadership · AI
-          </div>
-          <div style={{ fontSize: 76, lineHeight: 1, marginTop: 18, letterSpacing: -2 }}>{site.name}</div>
+          <img src={markSrc} alt="" width={96} height={96} style={{ marginLeft: -6 }} />
+          <div style={{ fontSize: 76, lineHeight: 1, marginTop: 22, letterSpacing: -2 }}>{site.name}</div>
           <div style={{ fontSize: 26, lineHeight: 1.35, marginTop: 24, opacity: 0.9 }}>
             Head of Technology Strategy & AI in the SDLC at Equal Experts. Founder of TeamMate.
           </div>

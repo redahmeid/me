@@ -13,6 +13,11 @@
   --accent: #34527a;
   --accent-strong: #1f3756;
   --accent-tint: #e1e7ef;
+  /* Four-corners logo: strategy, tech, family, football */
+  --corner-strategy: #185fa5;
+  --corner-tech: #0f6e56;
+  --corner-family: #993c1d;
+  --corner-football: #3b6d11;
 
   /* Dark bands (hero, TeamMate) stay dark in both themes */
   --night: #111925;
@@ -42,6 +47,10 @@
     --accent: #a3bbdb;
     --accent-strong: #c8d7ec;
     --accent-tint: #18222f;
+    --corner-strategy: #85b7eb;
+    --corner-tech: #5dcaa5;
+    --corner-family: #f0997b;
+    --corner-football: #97c459;
 
     --night: #080c11;
     --night-raised: #111821;

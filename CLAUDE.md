@@ -19,6 +19,7 @@ content files below rather than hard-coding text into pages.
 | Main photo                                   | `assets/reda-hmeid.jpg`                |
 | Small square headshot (post author box)      | `assets/reda-hmeid-headshot.jpg`       |
 | Colours, fonts, article typography           | `app/globals.css`                      |
+| Logo (header, footer, favicon, share image)  | `components/logo.tsx`, files in `brand/` (see `brand/README.md`) |
 | Old-URL redirects                            | `next.config.ts`                       |
 
 Pages are in `app/` (`page.tsx` = home, `about/`, `work/`, `teammate/`, `blog/`, `contact/`).

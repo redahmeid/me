@@ -2,13 +2,15 @@ import Link from "next/link";
 import { site } from "@/content/site";
 import { Container } from "./ui";
 import { LinkedInIcon, RssIcon, XIcon } from "./icons";
+import { LogoMark } from "./logo";
 
 export function SiteFooter() {
   return (
     <footer className="mt-auto bg-night text-night-muted">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]">
         <div>
-          <p className="font-serif text-2xl text-night-ink">{site.name}</p>
+          <LogoMark tone="dark" className="h-16 w-16 text-night-ink" />
+          <p className="mt-5 font-serif text-2xl text-night-ink">{site.name}</p>
           <p className="mt-3 max-w-sm text-[0.95rem] leading-relaxed">
             {site.roles.map((r) => `${r.title}, ${r.org}`).join(". ")}.
           </p>
