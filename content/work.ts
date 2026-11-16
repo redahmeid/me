@@ -95,6 +95,22 @@ export const work = {
 
   publications: [
     {
+      title: "Engineers and architects are solving the same problems – just on different timelines",
+      outlet: "Equal Experts",
+      date: "September 2025",
+      summary:
+        "The ivory-tower architect no longer makes sense. Engineers and architects now share the same skills; what separates them is focus and time horizon.",
+      href: "https://www.equalexperts.com/blog/tech-focus/engineers-and-architects-are-solving-the-same-problems-just-on-different-timelines/",
+    },
+    {
+      title: "Beyond binary: a modern framework for build vs. buy decisions",
+      outlet: "Equal Experts",
+      date: "June 2025",
+      summary:
+        "Written with Dave Sammut. Build vs. buy is rarely a binary choice: context, strategy and organisational readiness decide where you should sit on the spectrum.",
+      href: "https://www.equalexperts.com/blog/our-thinking/beyond-binary-a-modern-framework-for-build-vs-buy-decisions/",
+    },
+    {
       title: "What does “being digital” actually mean?",
       outlet: "InfoQ",
       date: "January 2017",
